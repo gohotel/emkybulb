@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href='/paydirect/favicon.ico' />
+    <meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1, user-scalable=no" />
+    <title>WebPAY - QuickTeller</title>
+    <link href="https://mufasa.interswitchng.com/p/webpay/css//webpay.css" rel="stylesheet"/>
+
+    <script src="/paydirect/scripts/jquery?v=CkVTG71m7lHB5jSCpyOSxbeCVJLIPag7u7NL4ykFenk1"></script>
+
+    <script src="/paydirect/scripts/common?v=jLUrgCVp8uTb9-EbjDwfW1PWV8Xmd42eBH7s5VoIkU41"></script>
+
+    <script src="/paydirect/scripts/watermark?v=kSGnCu3oQ0rKQkmovB1pXGd2XtWLgNBmmXsLdhXXJIc1"></script>
+
+    <script src="/paydirect/scripts/close-browser?v="></script>
+
+    
+<script type="text/javascript" src="https://mufasa.interswitchng.com/p/aph/aph.min.js"></script></head>
+<body>
+    <div id="outer-frame">
+        <div id="page-header">
+            <div id="account-header">
+            </div>
+        </div>
+        <!--page logo header starts-->
+        <div id="page-logo-header" class="">
+            <div id="page-logo-header-content">
+                <img src="https://mufasa.interswitchng.com/p/webpay/img/webpay.png" id="db-logo" alt="isw" />
+                <div id="page-title-header" class="">
+                        <div class="client_holder">
+                            <img src="/paydirect/Logo/MerchantLogo/161" alt="">
+                        </div>
+                    <div class="merchant_name" style="display: none">
+                        
+    QuickTeller
+</div>
+                    <div style="height: 29px">
+                    </div>
+                </div>
+            </div>
+            <div id="tag">
+                <span>
+    08037822252
+&nbsp;<span id="loggedinusername">                    ( hotel gohotel ) 
+</span></span>
+            </div>
+        </div>
+        <!--page logo header ends-->
+        <div></div>
+        <div id="_msg" style="position: relative"></div>
+        <div style="padding-right: 10px; text-align: right;" id="aborttransaction">
+<form action="/paydirect/webpay/Abort" method="post">                <input type="submit" id="returntomerchantsite" class="btn btn-danger" value="Return to merchant site" name="returntomerchantsite" style="display: none;">
+                <a href="#" onclick="return Cancel_Click();" id="returnlink" tabindex="8">Return to merchant site</a>
+<input id="__wdx_ysfdr_xpl" name="__wdx_ysfdr_xpl" type="hidden" value="" /><input id="__wrx_yux_frd_xlp" name="__wrx_yux_frd_xlp" type="hidden" value="L3BheWRpcmVjdC9QYXkvUmVzcG9uc2VQb3N0Lz9yZXNwPVoxJmRlc2M9KFNlc3Npb24gTG9zdC9UaW1lIE91dCkmdHhuUmVmPU5RVHxUfFdlYnwzbnF0MDAwMXxWRVd8MTMwMTE2MTUwOTI2fDAwMDI1OTIxJnBheVJlZj0mcmV0UmVmPSZjYXJkTnVtPTAmYXBwckFtdD0wJmFtdD0yNTAwMDAmcnJyPSZ1cmw9aHR0cHMlM2ElMmYlMmZ3d3cucXVpY2t0ZWxsZXIuY29tJTJmJTJmUGF5bWVudENvbXBsZXRlUGFydGlhbA==" /></form>        </div>
+        <div id="payment-information">
+            
+
+
+
+<!-- information fieldset start -->
+<form action="/paydirect/webpay/processpayment" method="post">    <div id="mainDiv">
+
+        <!-- information fieldset end -->
+            <div class="price_ish">
+                <div class="course-ribbon green">
+                    <b>₦ 2,500.00</b>
+                </div>
+            </div>
+            <fieldset class="two-col">
+                <p class="left dontshow">
+                    <span class="exp">Amount:</span><br />
+                    <span class="pay-details">₦ 2,500.00</span>
+                </p>
+            </fieldset>
+            <div id="cardtype_login" style="display: none">
+                
+                
+                <div id="cardsSelectList"><select Class="selinput" id="cardtype" name="cardtype" onchange="webpay.ProcessCardTypeSelection($(this).val())" tabindex="1"><option value="0">- Select a card -</option>
+
+<optgroup label="Select one of your cards"><option value="0|1|1|Card Number|0|eCash PIN|1|_dp3CKWvGudPKx2Pcc|12|2050|1|0">Verve eCash</option>
+</optgroup>
+<optgroup label="Select your card type"><option value="1|1|1|Card Number|0|Card PIN|1|0|||0|0">Verve™</option>
+<option value="1|1|1|Card Number|0|Card PIN|2|0|||0|0">MasterCard™ Naira Debit</option>
+<option value="1|0|1|Card Number|0|Card PIN|3|0|||0|0">Visa</option>
+</optgroup>
+</select></div>
+                <div id="qtinfo" style="display: none">
+
+<span style="color: rgb(8, 80, 189);">
+</span>
+<script type="text/javascript">
+    $(function () {
+        webpay.SetUpQuestionInfo();
+    });
+</script>
+                </div>
+
+            </div>
+            <div id="cardImage" style="font-size: 10px; ">
+                &nbsp;Please wait...
+                <img alt="loading" src="/paydirect/Content/images/loading.gif" />
+            </div>
+            <div id="rowMain" style="display: none;">
+                <div id="cardNumberDiv">
+                    <span class="exp" id="cnLabel"></span>
+                    <br />
+                    <input autocomplete="off" tabindex="2" class="input_text" name="pp_cardpan" id="pp_cardpan"
+                           maxlength="20"/>
+                    <input autocomplete="off" class="input_text" name="pp_cardpan_alternate" id="pp_cardpan_alternate"
+                           style="display: none;" tabindex="2" />
+                </div>
+                
+
+                <div id="slen" style="margin-top: -8px;">
+                    <div id="expDiv">
+                        <div>
+                            <span class="exp">Expiry Date</span><br />
+                        </div>
+                        <div id="divExpMonth">
+                            <select tabindex="4" name="pp_exp_month" class="selinput pp_exp_month" id="pp_exp_month">
+                                <option value="-">--</option>
+                                <option value="01">Jan</option>
+                                <option value="02">Feb</option>
+                                <option value="03">Mar</option>
+                                <option value="04">Apr</option>
+                                <option value="05">May</option>
+                                <option value="06">Jun</option>
+                                <option value="07">Jul</option>
+                                <option value="08">Aug</option>
+                                <option value="09">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                            </select>
+                        </div>
+                        <div id="divExpYr">
+                            <select Class="selinput" id="pp_exp_year" name="pp_exp_year" tabindex="5"><option value="-">--</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+<option value="2025">2025</option>
+<option value="2050">2050</option>
+<option value="2049">2049</option>
+</select>
+                            
+                        </div>
+                    </div>
+                    <div id="cvv">
+                        <div>
+                            <span class="exp">CVV2</span> <span class="question">
+                                (What is cvv2?)
+                            </span>
+                        </div>
+                        <input type="password" autocomplete="off" id="txt_cvv2" name="txt_cvv2" class="input_text"
+                               tabindex="6" maxlength="3" />
+                    </div>
+                                        <br />
+                    <br />
+                </div>
+                <div id="pp_name">
+                    <span id="pp_pinpad_label" class="exp" style="text-transform: none;">Card PIN</span><br>
+                </div>
+                <div id="pp_pinpad_row">
+
+                    <input tabindex="7" type="password" maxlength="4" class="input_text_pin" name="pp_pin" id="pp_pin" readOnly=&quot;true&quot; /><br />
+                        <div class="pinsecure">
+                            <a href="javascript:pp_enter_text(6);">6</a> <a href="javascript:pp_enter_text(8);">8</a>
+                            <a href="javascript:pp_enter_text(5);">5</a> <a href="javascript:pp_enter_text(2);">2</a>
+                            <a href="javascript:pp_enter_text(1);">1</a> <a href="javascript:pp_enter_text(0);">0</a>
+                            <a href="javascript:pp_enter_text(3);">3</a> <a href="javascript:pp_enter_text(9);">9</a>
+                            <a href="javascript:pp_enter_text(7);">7</a> <a href="javascript:pp_enter_clearText();">
+                                Clr
+                            </a> <a href="javascript:pp_enter_text(4);">4</a>
+                            <a href="javascript:pp_enter_cancelText();">Del</a>
+                        </div>
+                </div>
+                <div style="clear: both;">
+                </div>
+                <div class="subscribe">
+                    By clicking Pay, I have agreed to this service’s <a id="privacy_policy" href="/paydirect/termsandconditions.htm"
+                                                                        target="_blank" title="Opens in a new window">
+                        Terms and Conditions
+                    </a>
+                </div>
+                <br />
+            </div>
+            <div>
+                <input type="hidden" name="data" id="data" />
+            </div>
+            <div id="buttonsDiv">
+                <span>
+                    <input type="button" tabindex="8" id="pay" value="Load Card" name="pay" style="display: none; margin-right: 25px;" class="btn btn-small btn-danger" />
+                </span>
+            </div>
+        <input id="__wdx_ysfdr_xpl" name="__wdx_ysfdr_xpl" type="hidden" value="" />
+        <input id="__wrx_yux_frd_xlp" name="__wrx_yux_frd_xlp" type="hidden" value="L3BheWRpcmVjdC9QYXkvUmVzcG9uc2VQb3N0Lz9yZXNwPVoxJmRlc2M9KFNlc3Npb24gTG9zdC9UaW1lIE91dCkmdHhuUmVmPU5RVHxUfFdlYnwzbnF0MDAwMXxWRVd8MTMwMTE2MTUwOTI2fDAwMDI1OTIxJnBheVJlZj0mcmV0UmVmPSZjYXJkTnVtPTAmYXBwckFtdD0wJmFtdD0yNTAwMDAmcnJyPSZ1cmw9aHR0cHMlM2ElMmYlMmZ3d3cucXVpY2t0ZWxsZXIuY29tJTJmJTJmUGF5bWVudENvbXBsZXRlUGFydGlhbA==" />
+    </div>
+</form>
+<div id="processing" style="display: none;"
+    align="center">
+    <p style="font-size: 18px;" align="center">
+        Please wait...</p>
+    <img src="/paydirect/content/images/ajax-loader.gif" alt="loading"/>
+</div>
+
+
+            <div id="verifymobilediv"  style="display: none;">
+            </div>
+            <div id="logos" style="margin-top: -5px;">
+                <hr />
+                <div class="line" style="margin-bottom: -10px;">
+                    
+    <a id="stLink" target="_blank" class="greydout">
+        <img id="safeTokenImg" style="margin-bottom:5px;" src="https://mufasa.interswitchng.com/p/webpay/img/safetoken.png" alt="safetoken" />
+    </a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="mscAuthLink" target="_blank" class="greydout">
+        <img id="mcImg" src="/paydirect/Content/images/mastercode.png" width="76" height="40" alt="mastercode" />
+    </a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="visaAuthLink" target="_blank" class="greydout">
+        <img id="vsImage" src="/paydirect/Content/images/visa.png" width="76" height="40" alt="visa" />
+    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <p>
+                © Copyright Interswitch Limited</p>
+        </div>
+    </div>
+    <script src="/paydirect/scripts/webpay?v=2DtK6QsZmHwzexaq5YlEnAdNSRxLPxMOfp9f7rwtrhU1"></script>
+
+    
+    <script src="/paydirect/scripts/payment?v=_D6142YbqiR1uiAF57vZhCHca9XpvvkNm0k9v1q46RY1"></script>
+
+    <script type="text/javascript">
+        webpay.expiryDateErrorMessage = 'Please select your card expiry date';
+        webpay.pinErrorMessage = 'Error: Please enter your pin';
+        webpay.panErrorMessage = 'Warning: Invalid Card Number! Your Card Number must be between 12 and 19 digits in length.';
+        webpay.cvvErrorMessage = 'Your CVV2 must be 3 digits';
+        webpay.safeTokenMessage = 'The Safetoken service provides additional security for your online payments<br /> through the use of One Time Passwords (OTPs). You may be required to use an<br /> OTP to complete this transaction.';
+        webpay.mscMessage = 'Your card may be eligible or enrolled in MasterCard SecureCode payer<br /> authentication programs. After clicking on Pay, your Card Issuer may prompt <br />you for your payer authentication password to complete your purchase.';
+        webpay.vbvMessage = '';
+        webpay.retrieveCardsInfo = 'Retrieving your registered cards.';
+        webpay.SetUpQuestionInfoValue = 'This is the 3-digit number printed at the back of your card';
+        webpay.InitPaymentModule();
+        webpay.SetUpQuestionInfo();
+    </script>
+
+    <script type="text/javascript">
+        var $ = jQuery;
+        webpay.sessionIdentifierKey = '__wdx_ysfdr_xpl';
+        webpay.returnUrlKey = '__wrx_yux_frd_xlp';
+        webpay.noRegisteredCardsMsg = 'You have no Verve™ cards registered. Register your Verve™ card on the ATM so that you wont have to remember your card number.';
+
+       
+        
+        //{
+        var value = Model != null && Model.QuickTellerUserPassportDetails != null ? "0;" : "-1;";
+        //}
+        webpay.emptyCardSelectValue = value;  
+
+        var paymentStarted = false;
+
+        $('#returntomerchantsite').click(function() {
+            return ReturnToMerchantSite();
+        });
+
+
+        function ReturnToMerchantSite() {
+            if (paymentStarted || confirm('Are you sure you want to exit? Your purchase has not completed. Click Cancel to return to WebPAY. Click OK to return to the merchant site.')) {
+                return true;
+            }
+            return false;
+        }
+        
+        function Cancel_Click() {
+            $('#returntomerchantsite').click();
+        }
+
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href='/paydirect/favicon.ico' />
+    <meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1, user-scalable=no" />
+    <title>WebPAY - QuickTeller</title>
+    <link href="https://mufasa.interswitchng.com/p/webpay/css//webpay.css" rel="stylesheet"/>
+
+    <script src="/paydirect/scripts/jquery?v=CkVTG71m7lHB5jSCpyOSxbeCVJLIPag7u7NL4ykFenk1"></script>
+
+    <script src="/paydirect/scripts/common?v=jLUrgCVp8uTb9-EbjDwfW1PWV8Xmd42eBH7s5VoIkU41"></script>
+
+    <script src="/paydirect/scripts/watermark?v=kSGnCu3oQ0rKQkmovB1pXGd2XtWLgNBmmXsLdhXXJIc1"></script>
+
+    <script src="/paydirect/scripts/close-browser?v="></script>
+
+    
+<script type="text/javascript" src="https://mufasa.interswitchng.com/p/aph/aph.min.js"></script></head>
+<body>
+    <div id="outer-frame">
+        <div id="page-header">
+            <div id="account-header">
+            </div>
+        </div>
+        <!--page logo header starts-->
+        <div id="page-logo-header" class="">
+            <div id="page-logo-header-content">
+                <img src="https://mufasa.interswitchng.com/p/webpay/img/webpay.png" id="db-logo" alt="isw" />
+                <div id="page-title-header" class="">
+                        <div class="client_holder">
+                            <img src="/paydirect/Logo/MerchantLogo/161" alt="">
+                        </div>
+                    <div class="merchant_name" style="display: none">
+                        
+    QuickTeller
+</div>
+                    <div style="height: 29px">
+                    </div>
+                </div>
+            </div>
+            <div id="tag">
+                <span>
+    08037822252
+&nbsp;<span id="loggedinusername">                    ( hotel gohotel ) 
+</span></span>
+            </div>
+        </div>
+        <!--page logo header ends-->
+        <div></div>
+        <div id="_msg" style="position: relative"></div>
+        <div style="padding-right: 10px; text-align: right;" id="aborttransaction">
+<form action="/paydirect/webpay/Abort" method="post">                <input type="submit" id="returntomerchantsite" class="btn btn-danger" value="Return to merchant site" name="returntomerchantsite" style="display: none;">
+                <a href="#" onclick="return Cancel_Click();" id="returnlink" tabindex="8">Return to merchant site</a>
+<input id="__wdx_ysfdr_xpl" name="__wdx_ysfdr_xpl" type="hidden" value="" /><input id="__wrx_yux_frd_xlp" name="__wrx_yux_frd_xlp" type="hidden" value="L3BheWRpcmVjdC9QYXkvUmVzcG9uc2VQb3N0Lz9yZXNwPVoxJmRlc2M9KFNlc3Npb24gTG9zdC9UaW1lIE91dCkmdHhuUmVmPU5RVHxUfFdlYnwzbnF0MDAwMXxWRVd8MTMwMTE2MTUwOTI2fDAwMDI1OTIxJnBheVJlZj0mcmV0UmVmPSZjYXJkTnVtPTAmYXBwckFtdD0wJmFtdD0yNTAwMDAmcnJyPSZ1cmw9aHR0cHMlM2ElMmYlMmZ3d3cucXVpY2t0ZWxsZXIuY29tJTJmJTJmUGF5bWVudENvbXBsZXRlUGFydGlhbA==" /></form>        </div>
+        <div id="payment-information">
+            
+
+
+
+<!-- information fieldset start -->
+<form action="/paydirect/webpay/processpayment" method="post">    <div id="mainDiv">
+
+        <!-- information fieldset end -->
+            <div class="price_ish">
+                <div class="course-ribbon green">
+                    <b>₦ 2,500.00</b>
+                </div>
+            </div>
+            <fieldset class="two-col">
+                <p class="left dontshow">
+                    <span class="exp">Amount:</span><br />
+                    <span class="pay-details">₦ 2,500.00</span>
+                </p>
+            </fieldset>
+            <div id="cardtype_login" style="display: none">
+                
+                
+                <div id="cardsSelectList"><select Class="selinput" id="cardtype" name="cardtype" onchange="webpay.ProcessCardTypeSelection($(this).val())" tabindex="1"><option value="0">- Select a card -</option>
+
+<optgroup label="Select one of your cards"><option value="0|1|1|Card Number|0|eCash PIN|1|_dp3CKWvGudPKx2Pcc|12|2050|1|0">Verve eCash</option>
+</optgroup>
+<optgroup label="Select your card type"><option value="1|1|1|Card Number|0|Card PIN|1|0|||0|0">Verve™</option>
+<option value="1|1|1|Card Number|0|Card PIN|2|0|||0|0">MasterCard™ Naira Debit</option>
+<option value="1|0|1|Card Number|0|Card PIN|3|0|||0|0">Visa</option>
+</optgroup>
+</select></div>
+                <div id="qtinfo" style="display: none">
+
+<span style="color: rgb(8, 80, 189);">
+</span>
+<script type="text/javascript">
+    $(function () {
+        webpay.SetUpQuestionInfo();
+    });
+</script>
+                </div>
+
+            </div>
+            <div id="cardImage" style="font-size: 10px; ">
+                &nbsp;Please wait...
+                <img alt="loading" src="/paydirect/Content/images/loading.gif" />
+            </div>
+            <div id="rowMain" style="display: none;">
+                <div id="cardNumberDiv">
+                    <span class="exp" id="cnLabel"></span>
+                    <br />
+                    <input autocomplete="off" tabindex="2" class="input_text" name="pp_cardpan" id="pp_cardpan"
+                           maxlength="20"/>
+                    <input autocomplete="off" class="input_text" name="pp_cardpan_alternate" id="pp_cardpan_alternate"
+                           style="display: none;" tabindex="2" />
+                </div>
+                
+
+                <div id="slen" style="margin-top: -8px;">
+                    <div id="expDiv">
+                        <div>
+                            <span class="exp">Expiry Date</span><br />
+                        </div>
+                        <div id="divExpMonth">
+                            <select tabindex="4" name="pp_exp_month" class="selinput pp_exp_month" id="pp_exp_month">
+                                <option value="-">--</option>
+                                <option value="01">Jan</option>
+                                <option value="02">Feb</option>
+                                <option value="03">Mar</option>
+                                <option value="04">Apr</option>
+                                <option value="05">May</option>
+                                <option value="06">Jun</option>
+                                <option value="07">Jul</option>
+                                <option value="08">Aug</option>
+                                <option value="09">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                            </select>
+                        </div>
+                        <div id="divExpYr">
+                            <select Class="selinput" id="pp_exp_year" name="pp_exp_year" tabindex="5"><option value="-">--</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+<option value="2025">2025</option>
+<option value="2050">2050</option>
+<option value="2049">2049</option>
+</select>
+                            
+                        </div>
+                    </div>
+                    <div id="cvv">
+                        <div>
+                            <span class="exp">CVV2</span> <span class="question">
+                                (What is cvv2?)
+                            </span>
+                        </div>
+                        <input type="password" autocomplete="off" id="txt_cvv2" name="txt_cvv2" class="input_text"
+                               tabindex="6" maxlength="3" />
+                    </div>
+                                        <br />
+                    <br />
+                </div>
+                <div id="pp_name">
+                    <span id="pp_pinpad_label" class="exp" style="text-transform: none;">Card PIN</span><br>
+                </div>
+                <div id="pp_pinpad_row">
+
+                    <input tabindex="7" type="password" maxlength="4" class="input_text_pin" name="pp_pin" id="pp_pin" readOnly=&quot;true&quot; /><br />
+                        <div class="pinsecure">
+                            <a href="javascript:pp_enter_text(6);">6</a> <a href="javascript:pp_enter_text(8);">8</a>
+                            <a href="javascript:pp_enter_text(5);">5</a> <a href="javascript:pp_enter_text(2);">2</a>
+                            <a href="javascript:pp_enter_text(1);">1</a> <a href="javascript:pp_enter_text(0);">0</a>
+                            <a href="javascript:pp_enter_text(3);">3</a> <a href="javascript:pp_enter_text(9);">9</a>
+                            <a href="javascript:pp_enter_text(7);">7</a> <a href="javascript:pp_enter_clearText();">
+                                Clr
+                            </a> <a href="javascript:pp_enter_text(4);">4</a>
+                            <a href="javascript:pp_enter_cancelText();">Del</a>
+                        </div>
+                </div>
+                <div style="clear: both;">
+                </div>
+                <div class="subscribe">
+                    By clicking Pay, I have agreed to this service’s <a id="privacy_policy" href="/paydirect/termsandconditions.htm"
+                                                                        target="_blank" title="Opens in a new window">
+                        Terms and Conditions
+                    </a>
+                </div>
+                <br />
+            </div>
+            <div>
+                <input type="hidden" name="data" id="data" />
+            </div>
+            <div id="buttonsDiv">
+                <span>
+                    <input type="button" tabindex="8" id="pay" value="Load Card" name="pay" style="display: none; margin-right: 25px;" class="btn btn-small btn-danger" />
+                </span>
+            </div>
+        <input id="__wdx_ysfdr_xpl" name="__wdx_ysfdr_xpl" type="hidden" value="" />
+        <input id="__wrx_yux_frd_xlp" name="__wrx_yux_frd_xlp" type="hidden" value="L3BheWRpcmVjdC9QYXkvUmVzcG9uc2VQb3N0Lz9yZXNwPVoxJmRlc2M9KFNlc3Npb24gTG9zdC9UaW1lIE91dCkmdHhuUmVmPU5RVHxUfFdlYnwzbnF0MDAwMXxWRVd8MTMwMTE2MTUwOTI2fDAwMDI1OTIxJnBheVJlZj0mcmV0UmVmPSZjYXJkTnVtPTAmYXBwckFtdD0wJmFtdD0yNTAwMDAmcnJyPSZ1cmw9aHR0cHMlM2ElMmYlMmZ3d3cucXVpY2t0ZWxsZXIuY29tJTJmJTJmUGF5bWVudENvbXBsZXRlUGFydGlhbA==" />
+    </div>
+</form>
+<div id="processing" style="display: none;"
+    align="center">
+    <p style="font-size: 18px;" align="center">
+        Please wait...</p>
+    <img src="/paydirect/content/images/ajax-loader.gif" alt="loading"/>
+</div>
+
+
+            <div id="verifymobilediv"  style="display: none;">
+            </div>
+            <div id="logos" style="margin-top: -5px;">
+                <hr />
+                <div class="line" style="margin-bottom: -10px;">
+                    
+    <a id="stLink" target="_blank" class="greydout">
+        <img id="safeTokenImg" style="margin-bottom:5px;" src="https://mufasa.interswitchng.com/p/webpay/img/safetoken.png" alt="safetoken" />
+    </a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="mscAuthLink" target="_blank" class="greydout">
+        <img id="mcImg" src="/paydirect/Content/images/mastercode.png" width="76" height="40" alt="mastercode" />
+    </a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="visaAuthLink" target="_blank" class="greydout">
+        <img id="vsImage" src="/paydirect/Content/images/visa.png" width="76" height="40" alt="visa" />
+    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <p>
+                © Copyright Interswitch Limited</p>
+        </div>
+    </div>
+    <script src="/paydirect/scripts/webpay?v=2DtK6QsZmHwzexaq5YlEnAdNSRxLPxMOfp9f7rwtrhU1"></script>
+
+    
+    <script src="/paydirect/scripts/payment?v=_D6142YbqiR1uiAF57vZhCHca9XpvvkNm0k9v1q46RY1"></script>
+
+    <script type="text/javascript">
+        webpay.expiryDateErrorMessage = 'Please select your card expiry date';
+        webpay.pinErrorMessage = 'Error: Please enter your pin';
+        webpay.panErrorMessage = 'Warning: Invalid Card Number! Your Card Number must be between 12 and 19 digits in length.';
+        webpay.cvvErrorMessage = 'Your CVV2 must be 3 digits';
+        webpay.safeTokenMessage = 'The Safetoken service provides additional security for your online payments<br /> through the use of One Time Passwords (OTPs). You may be required to use an<br /> OTP to complete this transaction.';
+        webpay.mscMessage = 'Your card may be eligible or enrolled in MasterCard SecureCode payer<br /> authentication programs. After clicking on Pay, your Card Issuer may prompt <br />you for your payer authentication password to complete your purchase.';
+        webpay.vbvMessage = '';
+        webpay.retrieveCardsInfo = 'Retrieving your registered cards.';
+        webpay.SetUpQuestionInfoValue = 'This is the 3-digit number printed at the back of your card';
+        webpay.InitPaymentModule();
+        webpay.SetUpQuestionInfo();
+    </script>
+
+    <script type="text/javascript">
+        var $ = jQuery;
+        webpay.sessionIdentifierKey = '__wdx_ysfdr_xpl';
+        webpay.returnUrlKey = '__wrx_yux_frd_xlp';
+        webpay.noRegisteredCardsMsg = 'You have no Verve™ cards registered. Register your Verve™ card on the ATM so that you wont have to remember your card number.';
+
+       
+        
+        //{
+        var value = Model != null && Model.QuickTellerUserPassportDetails != null ? "0;" : "-1;";
+        //}
+        webpay.emptyCardSelectValue = value;  
+
+        var paymentStarted = false;
+
+        $('#returntomerchantsite').click(function() {
+            return ReturnToMerchantSite();
+        });
+
+
+        function ReturnToMerchantSite() {
+            if (paymentStarted || confirm('Are you sure you want to exit? Your purchase has not completed. Click Cancel to return to WebPAY. Click OK to return to the merchant site.')) {
+                return true;
+            }
+            return false;
+        }
+        
+        function Cancel_Click() {
+            $('#returntomerchantsite').click();
+        }
+
+    </script>
+</body>
+</html>
